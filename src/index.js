@@ -10,6 +10,10 @@ app.get('/hello', (req, res) => {
 app.get('/app', (req, res) => {
       res.sendFile(__dirname + '/app.html');
     });
+
+app.get('/', (req, res) => {
+      res.sendFile(__dirname + '/index.html');
+    });
     
 
 app.listen(port, () => {
