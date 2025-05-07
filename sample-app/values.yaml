@@ -1,0 +1,22 @@
+replicaCount: 1
+
+image:
+  repository: shanmukhkasilanka/sample_app
+  tag: 0.0.1
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  host: sample-app.example.com
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

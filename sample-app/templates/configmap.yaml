@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}
+data:
+  hello.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page 1</title>
+      </head>
+      <body>
+        <h1>Welcome to hello page</h1>
+        <p>This is a sample app.</p>
+      </body>
+    </html>
+
+  app.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page 2</title>
+    </head>
+    <body>
+        <h1>Welcome to app page</h1>
+        <p>This is a sample app.</p>
+    </body>
+    </html>
+
