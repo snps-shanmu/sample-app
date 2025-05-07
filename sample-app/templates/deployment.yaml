@@ -21,7 +21,7 @@ spec:
         - containerPort: 3000
         volumeMounts:
         - name: public
-          mountPath: /app
+          mountPath: /app/config  # Mount ConfigMap to a separate directoryfig  # Mount ConfigMap to a separate directory
       volumes:
       - name: public
         configMap:

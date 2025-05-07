@@ -1,15 +1,18 @@
 # Use the official Node.js image as the base image
-FROM node:14
+FROM node:16.20.0
 
 # Set the working directory
-WORKDIR ./app/src
+WORKDIR /app
 
-RUN npm install express 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# Copy package.json and install dependencies
+COPY package.json .
+RUN npm install
 
-# Install on
+# Copy the application code
+COPY . .
+
+# Expose the application port
 EXPOSE 3000
 
-# Command to run the application
-CMD ["node", "index.js"]
+# Start the application
+CMD ["node", "src/index.js"]

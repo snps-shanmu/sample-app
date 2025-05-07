@@ -1,8 +1,8 @@
 replicaCount: 1
 
 image:
-  repository: shanmukhkasilanka/sample_app
-  tag: 0.0.2
+  repository: shanmukhkasilanka/sample-app
+  tag: 0.0.7
   pullPolicy: IfNotPresent
 
 service:
