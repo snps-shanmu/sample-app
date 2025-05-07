@@ -2,7 +2,7 @@
 FROM node:14
 
 # Set the working directory
-WORKDIR ./app
+WORKDIR ./app/src
 
 RUN npm install express 
 # Copy package.json and package-lock.json
